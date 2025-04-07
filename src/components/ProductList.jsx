@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 import "./ProductList.css";
 
 const ProductList = () => {
@@ -24,10 +25,16 @@ const ProductList = () => {
       <div className="product-grid">
         {products.map((product) => (
           <div className="product-card" key={product.id}>
-            <img src={product.image} alt={product.title} />
-            <h3>{product.title}</h3>
+              <img src={product.image} alt={product.title} />
+              <h3>{product.title}</h3>
+             <Link to={`/product/${product.id}`}>
+              <h6>{product.title}</h6>
+            </Link>
+            {/* <img src={product.image} alt={product.title} />
+            <h3>{product.title}</h3> */}
             <p>${product.price.toFixed(2)}</p>
             <button onClick={() => addToCart(product)}>Add to Cart 🛒</button>
+           
           </div>
         ))}
       </div>

@@ -46,6 +46,9 @@
   }
   
   .product-card h3 {
+    /* text-decoration: none; */
+    text-decoration: none;
+    color: inherit;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
   }

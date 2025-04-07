@@ -1,6 +1,7 @@
 // src/components/Footer.jsx
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom"; // For navigation links
 import { Facebook, Instagram, Twitter, Mail } from "lucide-react"; // Optional icons
 
 const Footer = () => {
@@ -18,11 +19,11 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Cart</a></li>
-            <li><a href="#">Sign Up</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/categories">Categories</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/cart">Cart</Link></li>
+          <li><Link to="/signup">Sign Up</Link></li>
           </ul>
         </div>
 
